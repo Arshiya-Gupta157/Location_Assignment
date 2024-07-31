@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let loc = prompt("Enter your Location: ").trim().toLowerCase();
+        if (loc === 'punjab' || loc === 'haryana' || loc === 'chandigarh') {
+            let username = prompt("Enter Username: ");
+            let password = prompt("Enter Password: ");
+            let validUsername = 'Arshiya';
+            let validPassword = '12345';
+            if (username === validUsername && password === validPassword) {
+                let url = '';
+
+                if (loc === 'punjab') {
+                    url = 'https://maps.app.goo.gl/e4zunvBww2gaY3rYA'; 
+                } else if (loc === 'haryana') {
+                    url = 'https://maps.app.goo.gl/bccZ5j7EVmTBz4ga8'; 
+                } else if (loc === 'chandigarh') {
+                    url = 'https://maps.app.goo.gl/WeGVbuLwyuU2b1fp6'; 
+                }
+
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    alert('URL not found');
+                }
+
+            } else {
+                alert("Invalid Credentials!!");
+            }
+        } else {
+            alert("Access Denied!!");
+        }
+    </script>
+</body>
+</html>
